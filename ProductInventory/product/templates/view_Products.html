@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Products</title>
+</head>
+<body>
+    <h1>Products List</h1>
+    <ul>
+        {% for product in Products %}
+            <li>{{ product.category }} - {{ product.product_name }} - {{ product.price }} - {{ product.email }} <a href="{% url 'deleteproduct' product.id %}">Delete</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
