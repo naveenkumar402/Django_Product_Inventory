@@ -78,14 +78,14 @@ WSGI_APPLICATION = 'ProductInventory.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ProductInventory',    # Replace 'your_database_name' with the name of your MySQL database
-        'USER': 'root',   # Replace 'your_mysql_username' with your MySQL username
-        'PASSWORD': 'password',  # Replace 'your_mysql_password' with your MySQL password
-        'HOST': 'localhost',            # MySQL database host. If your MySQL server is running on a different host, specify it here.
-        'PORT': '3306',                 # MySQL port. Default is 3306.
+        'NAME': 'ProductInventory',   
+        'USER': 'root',   
+        'PASSWORD': 'password',  
+        'HOST': 'localhost',            
+        'PORT': '3306',                 
         'OPTIONS': {
-            'charset': 'utf8mb4',       # Optional: Set the character set. utf8mb4 is recommended for supporting emoji and special characters.
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",  # Optional: Set SQL mode to strict to avoid data truncation issues.
+            'charset': 'utf8mb4',       
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",  
         },
     }
 }

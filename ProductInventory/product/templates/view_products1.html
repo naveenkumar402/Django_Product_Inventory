@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Products</title>
+</head>
+<body>
+    <h1>Products List</h1>
+    <ul>
+        {% if Products  %}
+            <li>{{ Products.category }} - {{ Products.product_name }} - {{ Products.price }} - {{ Products.email }} <a href="{% url 'deleteproduct' Products.id %}">Delete</a></li>
+        {% endif %}
+    </ul>
+</body>
+</html>

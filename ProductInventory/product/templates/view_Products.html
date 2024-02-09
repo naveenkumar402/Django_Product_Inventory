@@ -6,11 +6,30 @@
     <title>View Products</title>
 </head>
 <body>
+    <div align="center">
     <h1>Products List</h1>
-    <ul>
-        {% for product in Products %}
-            <li>{{ product.category }} - {{ product.product_name }} - {{ product.price }} - {{ product.email }} <a href="{% url 'deleteproduct' product.id %}">Delete</a></li>
-        {% endfor %}
-    </ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Email</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+            {% for product in Products %}
+            <tr>
+                <td>{{ product.category }}</td>
+                <td>{{ product.product_name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.email }}</td>
+                <td><a href="{% url 'deleteproduct' product.id %}">Delete</a></td>
+                <td><a href="{% url 'updateproduct' product.id %}">Update</a></td>
+            </tr>
+            {% endfor %}
+    </table>
+</div>
 </body>
 </html>
