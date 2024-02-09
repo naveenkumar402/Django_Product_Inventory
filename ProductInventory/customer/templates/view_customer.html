@@ -9,7 +9,7 @@
     <h1>Customer List</h1>
     <ul>
         {% for customer in customer %}
-            <li>{{ customer.name }} - {{ customer.email }} - {{ customer.mobile }} - {{ customer.state }} - {{ customer.country }} <a href="{% url 'deletecustomer' customer.id %}">Delete</a></li>
+            <li>{{ customer.name }} - {{ customer.email }} - {{ customer.mobile }} - {{ customer.state }} - {{ customer.country }} <a href="{% url 'deletecustomer' customer.email %}">Delete</a></li>
         {% endfor %}
     </ul>
 </body>

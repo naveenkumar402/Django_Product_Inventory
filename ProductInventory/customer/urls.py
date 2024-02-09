@@ -5,5 +5,5 @@ urlpatterns = [
     path('',views.addcustomer),
     path('add/', views.addcustomer, name='addcustomer'),
     path('view/', views.viewcustomer, name='viewcustomer'),
-    path('delete/<int:id>/', views.deletecustomer, name='deletecustomer'),
+    path('delete/<str:email>/', views.deletecustomer, name='deletecustomer'),
 ]

@@ -20,8 +20,8 @@ def viewcustomer(request):
     customer = Customer.objects.all()
     return render(request, 'view_customer.html', {'customer': customer})
 
-def deletecustomer(request,id):
-    customer= Customer.objects.get(id=id)
+def deletecustomer(request,email):
+    customer= Customer.objects.get(email=email)
     if request.method == 'POST':
         customer.delete()
         return redirect('viewcustomer')  

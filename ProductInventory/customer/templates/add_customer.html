@@ -11,7 +11,7 @@
             <h1>Add Customer</h1>
             <p style="color: red;">{{ error_message }}</p>
             <form method="post">
-                
+                {% csrf_token %}
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name"><br>
                 <label for="email">Email:</label><br>
